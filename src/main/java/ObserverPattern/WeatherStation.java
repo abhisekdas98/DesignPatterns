@@ -1,5 +1,6 @@
 package ObserverPattern;
 
+import ObserverPattern.ObserverImpl.AvgMaxMinDisplay;
 import ObserverPattern.ObserverImpl.CurrentConditionsDisplay;
 import ObserverPattern.ObserverImpl.ForecastDisplay;
 import ObserverPattern.ObserverImpl.StatisticsDisplay;
@@ -13,7 +14,7 @@ public class WeatherStation {
         CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
         StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
-
+        AvgMaxMinDisplay avgMaxMinDisplay = new AvgMaxMinDisplay(weatherData);
         System.out.println("I am in WeatherStation setting measurements and update my subscribers");
         weatherData.setMeasurements(23,56,100);
         weatherData.setMeasurements(46,78,29);

@@ -8,3 +8,5 @@ Design Principle used :
 ->Favour Composition(HAS-A relationship) over inheritance(IS-A relationship) (Duck has a fly behaviour and a quack behaviour)
 we have composed them in the duck class.
 
+2)Observer Design Pattern : Implemented Observer Design Pattern with Publisher and Subscriber Model
+
