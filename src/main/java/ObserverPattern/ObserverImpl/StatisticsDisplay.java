@@ -18,10 +18,10 @@ public class StatisticsDisplay implements Observer , DisplayElement {
         weatherData.registerObserver(this);
     }
     @Override
-    public void update(float temp, float humidity, float pressure) {
-        this.temp = temp;
-        this.humidity = humidity;
-        this.pressure = pressure;
+    public void update() {
+        this.temp = weatherData.getTemp();
+        this.humidity = weatherData.getHumidity();
+        this.pressure = weatherData.getPressure();
         display();
     }
 

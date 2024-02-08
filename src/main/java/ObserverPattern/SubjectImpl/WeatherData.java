@@ -2,11 +2,15 @@ package ObserverPattern.SubjectImpl;
 
 import ObserverPattern.Observers.Observer;
 import ObserverPattern.Subject.Subject;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
+@Getter
+@Setter
 public class WeatherData implements Subject {
 
     private List<Observer> observers;
@@ -33,7 +37,9 @@ public class WeatherData implements Subject {
     public void notifyObservers() {
         for(Observer observer : observers)
         {
-            observer.update(this.temp,this.humidity,this.pressure);
+            //observer.update(this.temp,this.humidity,this.pressure);
+            // changed the update method without param to pull by observers from the Subject which will be more convenient design pattern
+            observer.update();
         }
     }
 
